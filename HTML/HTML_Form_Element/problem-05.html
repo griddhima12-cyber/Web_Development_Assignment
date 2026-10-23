@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Commerce Checkout</title>
+</head>
+
+<body>
+
+    <h1>Checkout</h1>
+    <p>Complete your details below to place your order.</p>
+
+    <!-- Product Table -->
+    <h2>Selected Products</h2>
+
+    <table border="1">
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Total</th>
+        </tr>
+
+        <tr>
+            <td>Smartphone</td>
+            <td>1</td>
+            <td>₹20000</td>
+            <td>₹20000</td>
+        </tr>
+
+        <tr>
+            <td>Headphones</td>
+            <td>2</td>
+            <td>₹1500</td>
+            <td>₹3000</td>
+        </tr>
+
+        <tr>
+            <td>Power Bank</td>
+            <td>1</td>
+            <td>₹1200</td>
+            <td>₹1200</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <img src="store.jpg" alt="Online Store" width="200">
+
+    <form>
+
+        <!-- Customer Information -->
+        <h2>Customer Information</h2>
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name"
+               placeholder="Enter your name"
+               required minlength="3" autocomplete="name">
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"
+               placeholder="Enter your email"
+               required autocomplete="email">
+        <br><br>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile"
+               placeholder="10 digit mobile number"
+               pattern="[0-9]{10}"
+               required autocomplete="tel">
+        <br><br>
+
+
+        <!-- Delivery Address -->
+        <h2>Delivery Address</h2>
+
+        <label for="address">House/Street:</label>
+        <input type="text" id="address" name="address"
+               placeholder="House no. / Street"
+               required autocomplete="street-address">
+        <br><br>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city"
+               placeholder="Enter city" required>
+        <br><br>
+
+        <label for="state">State:</label>
+        <select id="state" name="state" required>
+            <option value="">Select State</option>
+            <option value="up">Uttar Pradesh</option>
+            <option value="delhi">Delhi</option>
+            <option value="haryana">Haryana</option>
+            <option value="rajasthan">Rajasthan</option>
+        </select>
+        <br><br>
+
+        <label for="postal">Postal Code:</label>
+        <input type="text" id="postal" name="postal"
+               placeholder="6 digit PIN code"
+               pattern="[0-9]{6}"
+               required>
+        <br><br>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="">Select Country</option>
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+            <option value="canada">Canada</option>
+        </select>
+        <br><br>
+
+
+        <!-- Delivery Choice -->
+        <h2>Delivery Method</h2>
+
+        <input type="radio" id="standard"
+               name="delivery" value="standard" required>
+        <label for="standard">Standard</label>
+
+        <input type="radio" id="express"
+               name="delivery" value="express">
+        <label for="express">Express</label>
+
+        <input type="radio" id="sameday"
+               name="delivery" value="same-day">
+        <label for="sameday">Same Day</label>
+
+        <br><br>
+
+
+        <!-- Payment Choice -->
+        <h2>Payment Method</h2>
+
+        <input type="radio" id="card"
+               name="payment" value="card" required>
+        <label for="card">Card</label>
+
+        <input type="radio" id="cod"
+               name="payment" value="cod">
+        <label for="cod">Cash on Delivery</label>
+
+        <input type="radio" id="upi"
+               name="payment" value="upi">
+        <label for="upi">UPI/Online Payment</label>
+
+        <br><br>
+
+
+        <!-- Card Details -->
+        <h2>Card Details</h2>
+
+        <label for="cardname">Card Holder Name:</label>
+        <input type="text" id="cardname" name="cardname"
+               placeholder="Card holder name">
+        <br><br>
+
+        <label for="cardnumber">Card Number:</label>
+        <input type="text" id="cardnumber" name="cardnumber"
+               placeholder="Enter card number"
+               inputmode="numeric"
+               pattern="[0-9]{16}">
+        <br><br>
+
+        <label for="expiry">Expiry Date:</label>
+        <input type="month" id="expiry" name="expiry">
+        <br><br>
+
+        <label for="security">Security Code:</label>
+        <input type="password" id="security" name="security"
+               maxlength="4" placeholder="CVV">
+        <br><br>
+
+
+        <!-- Billing Address -->
+        <h2>Billing Address</h2>
+
+        <input type="checkbox" id="billing"
+               name="billing" value="same">
+        <label for="billing">
+            Billing address is same as delivery address
+        </label>
+
+        <br><br>
+
+
+        <!-- Delivery Instructions -->
+        <h2>Delivery Instructions</h2>
+
+        <textarea id="instructions"
+                  name="instructions"
+                  rows="4"
+                  cols="40"
+                  placeholder="Enter delivery instructions">
+        </textarea>
+
+        <br><br>
+
+
+        <!-- Coupon -->
+        <label for="coupon">Coupon/Promo Code:</label>
+        <input type="text" id="coupon" name="coupon"
+               placeholder="Enter coupon code"
+               maxlength="15"
+               pattern="[A-Za-z0-9]+">
+
+        <br><br>
+
+
+        <!-- Confirmation -->
+        <input type="checkbox" id="terms"
+               name="terms" value="accepted" required>
+        <label for="terms">
+            I agree to the Terms & Conditions
+        </label>
+
+        <br>
+
+        <input type="checkbox" id="confirm"
+               name="confirm" value="confirmed" required>
+        <label for="confirm">
+            I confirm my order details are correct
+        </label>
+
+        <br><br>
+
+
+        <!-- Buttons -->
+        <input type="submit" value="Place Order">
+        <input type="reset" value="Reset">
+
+    </form>
+
+    <br>
+
+    <a href="products.html">Continue Shopping</a>
+
+</body>
+</html>

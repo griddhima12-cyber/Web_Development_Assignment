@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Query Assignment 5 - Investors</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:30px;font-family:Arial,sans-serif}
+.layout{max-width:900px;margin:auto;display:grid;gap:14px;grid-template-columns:1fr 1fr 1fr;grid-template-areas:"nav nav nav" "left right1 right2" "left right3 right3"}
+nav{grid-area:nav;background:#ffff00;padding:14px;font-size:30px}
+.left{grid-area:left;background:#ff0000;min-height:230px;padding:14px}
+.investor{background:#00f02a;min-height:105px;padding:14px;font-size:20px}
+.right1{grid-area:right1}.right2{grid-area:right2}.right3{grid-area:right3}
+@media(max-width:700px){
+.layout{grid-template-columns:1fr 1fr;grid-template-areas:"nav nav" "left left" "right1 right2" "right3 right3"}
+}
+@media(max-width:450px){
+.layout{grid-template-columns:1fr;grid-template-areas:"nav" "left" "right1" "right2" "right3"}
+nav{font-size:28px}
+.left,.investor{min-height:170px}
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<nav>Navigation</nav>
+<div class="left">LEFT BOX</div>
+<div class="investor right1">RIGHT BOX 1</div>
+<div class="investor right2">RIGHT BOX 2</div>
+<div class="investor right3">RIGHT BOX 3</div>
+</div>
+</body>
+</html>

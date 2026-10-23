@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doctor Cards - Grid Responsive</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:35px;font-family:Arial,sans-serif;color:#222}
+h1{text-align:center;font-family:Georgia,serif}
+.subtitle{text-align:center;max-width:650px;margin:0 auto 30px;color:#666}
+.cards{max-width:1000px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.card{padding:8px;text-align:center;box-shadow:0 4px 15px #ddd;background:#fff}
+.card img{width:100%;height:190px;object-fit:cover}
+.card .buttons{display:flex;justify-content:space-between;gap:8px}
+button{border:0;border-radius:15px;padding:7px 12px}
+@media(max-width:700px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:450px){.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<h1>Our Specialist</h1>
+<p class="subtitle">Choose from our specialist doctors. The layout changes responsively using CSS Grid and media queries.</p>
+<section class="cards">
+<div class="card"><img src="https://preview.colorlib.com/theme/medino/assets/images/doctor1.jpg.webp" alt="Doctor"><h3>ETHEL DAVIS</h3><p>DR. SPECIALIST</p><div class="buttons"><button>Know More</button><button>Book Now</button></div></div>
+<div class="card"><img src="https://preview.colorlib.com/theme/medino/assets/images/doctor1.jpg.webp" alt="Doctor"><h3>DAND MORRIS</h3><p>DR. SPECIALIST</p><div class="buttons"><button>Know More</button><button>Book Now</button></div></div>
+<div class="card"><img src="https://preview.colorlib.com/theme/medino/assets/images/doctor1.jpg.webp" alt="Doctor"><h3>ALIGN BOARD</h3><p>DR. SPECIALIST</p><div class="buttons"><button>Know More</button><button>Book Now</button></div></div>
+<div class="card"><img src="https://preview.colorlib.com/theme/medino/assets/images/doctor1.jpg.webp" alt="Doctor"><h3>JESON LIMIT</h3><p>DR. SPECIALIST</p><div class="buttons"><button>Know More</button><button>Book Now</button></div></div>
+</section>
+</body>
+</html>

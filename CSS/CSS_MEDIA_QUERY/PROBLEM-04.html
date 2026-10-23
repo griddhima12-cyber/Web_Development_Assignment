@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Query Assignment 4</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:30px;font-family:Arial,sans-serif}
+.layout{max-width:900px;margin:auto;display:grid;gap:12px;grid-template-columns:3fr 1fr;grid-template-rows:auto 1fr;grid-template-areas:"nav nav" "left right"}
+nav{grid-area:nav;background:#ffff00;padding:10px;font-size:28px}
+.left{grid-area:left;background:#ff0000;min-height:220px;padding:8px}
+.right{grid-area:right;display:grid;gap:12px;grid-template-rows:repeat(3,1fr)}
+.right div{background:#00f02a;padding:8px;min-height:65px}
+@media(max-width:700px){
+.layout{grid-template-columns:1fr;grid-template-areas:"nav" "left" "right"}
+.right{grid-template-columns:repeat(3,1fr);grid-template-rows:1fr}
+}
+@media(max-width:450px){
+.layout{grid-template-columns:1fr}
+.right{grid-template-columns:1fr;grid-template-rows:repeat(3,1fr)}
+.left{min-height:180px}
+.right div{min-height:150px}
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<nav>Navigation</nav>
+<div class="left">LEFT BOX</div>
+<div class="right">
+<div>RIGHT BOX 1</div>
+<div>RIGHT BOX 2</div>
+<div>RIGHT BOX 3</div>
+</div>
+</div>
+</body>
+</html>

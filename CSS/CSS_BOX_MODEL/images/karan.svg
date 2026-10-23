@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180">
+<rect width="240" height="180" fill="#744f6d"/><circle cx="120" cy="72" r="43" fill="#f0c7a8"/>
+<path d="M77 65Q82 20 120 25Q160 20 165 65Q145 45 120 47Q95 45 77 65" fill="#252525"/>
+<circle cx="105" cy="70" r="4" fill="#222"/><circle cx="135" cy="70" r="4" fill="#222"/>
+<path d="M106 92Q120 102 134 92" fill="none" stroke="#8b4d43" stroke-width="3"/>
+<path d="M65 180Q70 120 120 120Q170 120 175 180" fill="#f5f5f5"/>
+<text x="120" y="155" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#744f6d">KV</text>
+</svg>

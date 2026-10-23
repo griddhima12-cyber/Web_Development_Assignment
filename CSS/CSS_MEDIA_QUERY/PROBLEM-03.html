@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Query Assignment 3</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:30px;font-family:Arial,sans-serif}
+.layout{max-width:900px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+nav{grid-column:1/-1;background:#ffff00;padding:14px;font-size:30px}
+.box{min-height:210px;padding:12px;font-size:20px}
+.left{background:#ff0000}.right{background:#00f02a}
+@media(max-width:700px){
+.layout{grid-template-columns:1fr 1fr}
+}
+@media(max-width:450px){
+.layout{grid-template-columns:1fr}
+nav{font-size:30px}
+.box{min-height:180px}
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<nav>Navigation</nav>
+<div class="box left">LEFT BOX</div>
+<div class="box right">RIGHT BOX</div>
+</div>
+</body>
+</html>
